@@ -28,6 +28,7 @@ body {
   background-size: cover;
   height: 100vh;
 }
+
 a.dust-btn {
   position: relative;
   width: 180px;
@@ -43,13 +44,17 @@ a.dust-btn {
   border: 1px solid var(--color-red);
   color: #fff;
 }
+
 a.dust-btn.clicked {
+  pointer-events: none;
   border: 1px solid transparent;
   background: transparent url(../images/button.jpeg);
   transition-delay: 0.8s;
   background-size: 180px;
+  background-repeat: no-repeat;
   animation: animate var(--speed-fast) steps(8) forwards;
 }
+
 a.stay-btn {
   position: relative;
   width: 180px;
@@ -69,21 +74,13 @@ a.stay-btn {
 @keyframes animate {
   0% {
     background-position-y: 0;
-    /* background-color: #ec1840; */
   }
   100% {
-    background-position-y: -480px;
+    background-position-y: -550px;
     color: transparent;
   }
 }
-@keyframes snap-img {
-  0% {
-    opacity: 100;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+
 .btn-container {
   display: flex;
   flex-direction: row;
@@ -95,7 +92,21 @@ a.stay-btn {
   max-height: 60%;
   margin-bottom: 30px;
 }
+
 img {
   height: 100%;
   /* animation: snap-img var(--speed-slow) forwards; */
+}
+
+img.snap-img {
+  animation: snap-img var(--speed-slow) forwards;
+}
+
+@keyframes snap-img {
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
 }
