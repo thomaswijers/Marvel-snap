@@ -9,6 +9,7 @@
   --color-black-3: #444;
   --speed-normal: 0.5s;
   --speed-fast: 0.8s;
+  --speed-slow: 1.5s;
 }
 
 * {
@@ -75,9 +76,26 @@ a.stay-btn {
     color: transparent;
   }
 }
-.container {
+@keyframes snap-img {
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.btn-container {
   display: flex;
   flex-direction: row;
   margin-bottom: 100px;
-  gap: 50px;
+  gap: 80px;
+}
+
+.img-container {
+  max-height: 60%;
+  margin-bottom: 30px;
+}
+img {
+  height: 100%;
+  /* animation: snap-img var(--speed-slow) forwards; */
 }
