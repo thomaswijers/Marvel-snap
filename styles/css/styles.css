@@ -20,11 +20,14 @@
 
 body {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  background-image: url(../images/background-ux.jpeg);
+  background-size: cover;
+  height: 100vh;
 }
-a {
+a.dust-btn {
   position: relative;
   width: 180px;
   height: 60px;
@@ -37,15 +40,29 @@ a {
   color: var(--color-white);
   transition: var(--speed-normal);
   border: 1px solid var(--color-red);
-  color: #111;
-  /* background: var(--color-red) url(../images/button.jpeg); */
+  color: #fff;
 }
-a:hover {
+a.dust-btn.clicked {
   border: 1px solid transparent;
   background: transparent url(../images/button.jpeg);
   transition-delay: 0.8s;
   background-size: 180px;
   animation: animate var(--speed-fast) steps(8) forwards;
+}
+a.stay-btn {
+  position: relative;
+  width: 180px;
+  height: 60px;
+  margin: 20px;
+  line-height: 60px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-white);
+  transition: var(--speed-normal);
+  border: 1px solid var(--color-red);
+  color: #fff;
 }
 
 @keyframes animate {
@@ -57,4 +74,10 @@ a:hover {
     background-position-y: -480px;
     color: transparent;
   }
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 100px;
+  gap: 50px;
 }
