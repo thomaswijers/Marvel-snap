@@ -37,10 +37,12 @@ a {
   color: var(--color-white);
   transition: var(--speed-normal);
   border: 1px solid var(--color-red);
+  color: #111;
+  /* background: var(--color-red) url(../images/button.jpeg); */
 }
 a:hover {
   border: 1px solid transparent;
-  background: var(--color-red) url(https://i.postimg.cc/wBXGXbWN/pixel.png);
+  background: transparent url(../images/button.jpeg);
   transition-delay: 0.8s;
   background-size: 180px;
   animation: animate var(--speed-fast) steps(8) forwards;
@@ -49,8 +51,10 @@ a:hover {
 @keyframes animate {
   0% {
     background-position-y: 0;
+    /* background-color: #ec1840; */
   }
   100% {
     background-position-y: -480px;
+    color: transparent;
   }
 }
