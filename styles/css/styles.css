@@ -27,6 +27,7 @@ body {
   background-image: url(../images/background-ux.jpeg);
   background-size: cover;
   height: 100vh;
+  overflow: hidden;
 }
 
 a.dust-btn {
@@ -91,15 +92,18 @@ a.stay-btn {
 .img-container {
   max-height: 60%;
   margin-bottom: 30px;
+  min-height: 60%;
 }
 
 img {
   height: 100%;
-  /* animation: snap-img var(--speed-slow) forwards; */
 }
 
 img.snap-img {
   animation: snap-img var(--speed-slow) forwards;
+}
+img.keep-img {
+  animation: keep-img 1.2s forwards;
 }
 
 @keyframes snap-img {
@@ -108,6 +112,14 @@ img.snap-img {
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes keep-img {
+  0% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(100vw);
   }
 }
 h1.header {

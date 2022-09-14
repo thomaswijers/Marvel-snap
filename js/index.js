@@ -18,6 +18,7 @@ $(document).ready(function () {
   }
 
   const avengerImages = [
+    makePath("iron-man.png"),
     makePath("spiderman.png"),
     makePath("black-widow.png"),
     makePath("captain-america.png"),
@@ -43,5 +44,14 @@ $(document).ready(function () {
 
       nextImage();
     }, 1900);
+  });
+  $(".stay-btn").click(function () {
+    $("#character").addClass("keep-img");
+
+    setTimeout(function () {
+      $("#character").removeClass("keep-img");
+      $("#character").attr("src", "");
+      nextImage();
+    }, 1000);
   });
 });
