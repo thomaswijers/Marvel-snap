@@ -110,3 +110,8 @@ img.snap-img {
     opacity: 0;
   }
 }
+h1.header {
+  font-size: 35px;
+  margin-top: -60px;
+  color: var(--color-red);
+}
